@@ -5,14 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap -->
         <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="/assets/css/site.css" rel="stylesheet" media="screen">
+        <link href="/assets/phpdd18/css/site.css" rel="stylesheet" media="screen">
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
         <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Roboto:400,700,300' rel='stylesheet' type='text/css'>
     </head>
     <body{% if "/" == current_page %} class="home-page"{% endif %}>
         <div class="navbar navbar-opencfp navbar-fixed-top section--full" role="navigation">
             <a href="{{ url('homepage') }}" class="logo pull-left">
-                <img data-src="/assets/img/logo.svg" class="svg-inject" alt="Open CFP">
+                <img data-src="/assets/phpdd18/img/logo.svg" class="svg-inject" alt="Open CFP">
             </a>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -25,16 +25,16 @@
             <div class="collapse navbar-collapse">
                 {% block navigation %}
                     <ul class="nav navbar-nav navbar-right">
-                        <li{% if path('speaker_package') == current_page %} class="active"{% endif %}><a href="{{ url('speaker_package') }}">Speaker Package</a></li>
-                        <li{% if path('talk_ideas') == current_page %} class="active"{% endif %}><a href="{{ url('talk_ideas') }}">Talk Ideas</a></li>
+                        <li{% if path('speaker_package') == current_page %} class="active"{% endif %}><a href="{{ url('speaker_package') }}">SPEAKER PACKAGE</a></li>
+                        <li{% if path('talk_ideas') == current_page %} class="active"{% endif %}><a href="{{ url('talk_ideas') }}">TALK IDEAS</a></li>
                         {% if user is defined and user is not empty %}
-                            <li><a href="{{ url('dashboard') }}">Dashboard</a></li>
+                            <li><a href="{{ url('dashboard') }}">DASHBOARD</a></li>
                             {% if user_is_admin %}
-                                <li><a href="{{ url('admin') }}">Admin</a></li>
+                                <li><a href="{{ url('admin') }}">ADMIN</a></li>
                             {% endif %}
-                            <li><a href="{{ url('logout') }}">Logout</a></li>
+                            <li><a href="{{ url('logout') }}">LOGOUT</a></li>
                         {% else %}
-                            <li><a href="{{ url('login') }}">Login</a></li>
+                            <li><a href="{{ url('login') }}">LOGIN</a></li>
                         {% endif %}
                     </ul>
                 {% endblock %}
