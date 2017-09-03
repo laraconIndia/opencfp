@@ -15,7 +15,7 @@ set :keep_releases, 3
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
-set :shared_files, ['config/production.yml', 'phinx.yml']
+set :shared_files, ['config/production.yml', 'phinx.yml', 'config/BasicAuth.php']
 set :shared_dirs, ['log', 'web/uploads']
 
 # Optional settings:

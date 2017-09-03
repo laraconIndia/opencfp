@@ -10,10 +10,11 @@ $environment = Environment::fromEnvironmentVariable();
 
 if ( $environment->equals( Environment::production() ) )
 {
+	$authData     = require __DIR__ . '/../config/BasicAuth.php';
 	$authUser     = $_SERVER['PHP_AUTH_USER'] ?? '';
 	$authPassword = $_SERVER['PHP_AUTH_PW'] ?? '';
 
-	if ( $authUser !== 'PHPDD18' || $authPassword !== 'PreView' )
+	if ( $authUser !== $authData['user'] || $authPassword !== $authData['password'] )
 	{
 		header( 'WWW-Authenticate: Basic realm="Login"' );
 		header( 'HTTP/1.0 401 Unauthorized' );
