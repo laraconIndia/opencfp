@@ -10,7 +10,7 @@ require 'mina/git'
 set :domain, 'cfp.phpdd.org'
 set :deploy_to, '/var/www/cfp.phpdd.org'
 set :repository, 'https://github.com/php-usergroup-dresden/opencfp.git'
-set :branch, 'PHPDD18'
+set :branch, 'master'
 set :keep_releases, 3
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
