@@ -74,9 +74,15 @@ a:hover {
 	padding-left: 2rem;
 }
 
-.section--primary {
+.section--primary,
+.section--primary b,
+.section--primary strong {
 	background: #44659b;
-	color: #ffffff;
+	color: #d1eaff;
+}
+
+.section--primary .headline {
+	color: #f6f6f6;
 }
 
 .section--primary a {
